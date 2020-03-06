@@ -30,7 +30,7 @@ def Detection(img):
 
 @app.route('/')
 def main_route():
-    return render_template("index.html")
+    return '<form action="getImageDetails" method="post" enctype="multipart/form-data">Select image to upload:<input type="file" name="file" id="fileToUpload"><br/><input type="submit" value="Upload Image" name="submit"></form>'
 
 @app.route('/getImageDetails', methods=['POST'])
 def getImageDetails():
